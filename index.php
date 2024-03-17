@@ -27,6 +27,15 @@ $operator = [];
 while($rowop = mysqli_fetch_array($getop)){
 	$operator[] = $rowop["NamaOperator"];
 }
+
+
+
+$sql = 'SELECT * from Produksi'; 
+mysqli_select_db($conn,'Produksi'); 
+$retval_table = mysqli_query($conn,$sql ); 
+
+
+
 ?>
 
 
@@ -793,7 +802,7 @@ while($rowop = mysqli_fetch_array($getop)){
                                     </tfoot>
                                     <tbody>
 					<?php
-					while($row = mysqli_fetch_array($retval)){
+					while($row = mysqli_fetch_array($retval_table)){
 						echo "<tr><td>".$row['ProduksiID']."</td><td>".$row['Tanggal']."</td><td>".$row['Jobsheet']."</td><td>".$row['NamaItem']."</td><td>".$row['NamaOperator']."</td><td>".$row['Hasil']."</td><td>".$row['JmlReject']."</td><td>".$row['Keterangan']."</td></tr>";
 					}
 					?>
