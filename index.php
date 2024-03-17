@@ -603,11 +603,6 @@ $retval_table = mysqli_query($conn,$sql );
                             </div>
                         </div> -->
 
-<<<<<<< HEAD
-                    </div>
-=======
->>>>>>> db228d1 (fix table row)
-
                     
 
                         <!-- Content Column ->
