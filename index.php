@@ -594,7 +594,10 @@ while($rowop = mysqli_fetch_array($getop)){
                             </div>
                         </div> -->
 
+<<<<<<< HEAD
                     </div>
+=======
+>>>>>>> db228d1 (fix table row)
 
                     
 
@@ -745,15 +748,10 @@ while($rowop = mysqli_fetch_array($getop)){
                                 </div>
                             </div> -->
 
-                        </div> 
                     </div>
                 
-                </div>
-                <!-- /.container-fluid -->
+		<p>
 
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
