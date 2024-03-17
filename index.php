@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+	    echo "Welcome to the member's area, " . htmlspecialchars($_SESSION['FullNama']) . "!";
+
+
+
 $nama = $_GET['op'];
 $dbhost = 'localhost';
 $dbuser = 'udo';
@@ -482,7 +488,7 @@ $retval_table = mysqli_query($conn,$sql );
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ProduksiID</th>
+                                            <th>ID</th>
                                             <th>Tanggal</th>
                                             <th>Jobsheet</th>
                                             <th>Nama Item</th>
@@ -494,7 +500,7 @@ $retval_table = mysqli_query($conn,$sql );
                                     </thead>
                                     <tfoot>
                                         <tr>
-					    <th>ProduksiID</th>
+					    <th>ID</th>
 					    <th>Tanggal</th>
 					    <th>Jobsheet</th>
 					    <th>Nama Item</th>
@@ -585,3 +591,10 @@ $retval_table = mysqli_query($conn,$sql );
 
 </body>
 </html>
+
+
+
+<?php } else {
+header('Location: login.html');
+					}
+
